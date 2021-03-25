@@ -1,0 +1,70 @@
+.website-header {
+    background-color: #504d4d;
+    height: 1.25em;
+    text-align: right;
+    color: white;
+    font-size: 0.7rem;
+    /* font-family: Roboto; */
+  }
+  
+  .contact-button {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 7px;
+    font-weight: bold;
+  }
+  
+  .register-box {
+    /*height: 500px;*/
+    padding: 2em 0em;
+    justify-content: center;
+    margin-top: 4em;
+    margin-right: 13em;
+    margin-left: 13em;
+    border: 3px solid #504d4d;
+    border-radius: 2em;
+  }
+  .footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  .social-media {
+    text-align: center;
+  }
+  
+  .footer-bar {
+    height: 25px;
+    background-color: #504d4d;
+  }
+  .register-box button{
+    font-size: 1rem;
+    background-color: #504d4d;
+    padding:0.5rem 1.5rem;
+    text-transform: uppercase;
+    color:white;
+    border-radius: 1rem;
+    border:none
+
+
+  }
+  .register-box input{
+    border-radius: 1rem;
+    border:1px solid #504d4d;
+    padding: 0.4rem;
+
+  }
+  .input-box{
+    text-align: left;
+    padding-left:6rem;
+    padding-top: 0.5rem;
+  }
+  
