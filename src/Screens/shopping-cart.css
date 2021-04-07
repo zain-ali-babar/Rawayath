@@ -1,0 +1,21 @@
+.website-header {
+    background-color: #504d4d;
+    height: 1.25em;
+    text-align: right;
+    color: white;
+    font-size: 0.7rem;
+    /* font-family: Roboto; */
+  }
+  
+  .contact-button {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 7px;
+    font-weight: bold;
+  }
