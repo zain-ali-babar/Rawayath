@@ -16,6 +16,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import logo from "./images/logo.png";
 
 function Shoppingcart () {
+    const [item,setItem] = useState([]);
+
     return(
         <div>
             <div className='website-header'>
@@ -24,6 +26,48 @@ function Shoppingcart () {
                     CONTACT US
                 </a>
                 </div>
+            </div>
+            <Grid container spacing={3}>
+                <Grid item xs={4}>
+                    <a className="rawayath-logo" href="">
+                        <img src={logo} alt="Image of logo" width="100" height="33"></img>
+                    </a>
+                </Grid>
+                <Grid item xs={4}>
+                    <div className="page-title">SHOPPING CART</div>
+                </Grid>
+            </Grid>
+            <div className='middle-content'>
+                <div className='heading-box'></div>
+                <div className='heading-box'>PREVIEW</div>
+                <div className='heading-box'>PRODUCT</div>
+                <div className='heading-box'>PRICE</div>
+                <div className='heading-box'>QUANTITY</div>
+                <div className='heading-box'>TOTAL</div>
+                {item.map((object,index)=>(
+                    <div>
+                    <div className='list-box'></div>
+                    <div className='list-box'></div>
+                    <div className='list-box'></div>
+                    <div className='list-box'></div>
+                    <div className='list-box'></div>
+                    <div className='list-box'></div>
+                    </div>
+                ))}
+                <div className='list-box'></div>
+                <div className='list-box'></div>
+                <div className='list-box'></div>
+                <div className='list-box'></div>
+                <div className='list-box'></div>
+                <div className='list-box'></div>
+            </div>
+            <div className='r-box'>
+                <div className='final-box'>SUB-TOTAL</div>
+                <div className='final-box'></div>
+                <div className='final-box'>DISCOUNT CODE</div>
+                <div className='final-box'></div>
+                <div className='final-box' style={{fontSize: '1.5em', fontWeight: 'bold'}}>TOTAL</div>
+                <div className='final-box'></div>
             </div>
         </div>
     );
