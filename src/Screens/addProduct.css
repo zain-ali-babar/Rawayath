@@ -1,0 +1,122 @@
+html{
+    font-size: 65%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: #504d4d;
+    text-align: right;
+}
+
+.contact-us-bar{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight:600;
+    padding: 1rem;
+    font-size: 1.3rem;
+    vertical-align:middle;
+    
+}
+.title-bar{
+    /* background-color: green; */
+    display: grid;
+    padding: 0.5rem 0.5rem 1rem;
+    grid-template-columns: 1.2fr 2fr;
+}
+.rawayath-logo{
+    text-align: left;
+}
+.page-title{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.middle-content{
+    text-align: left;
+    padding : 1rem 3rem;
+}
+.product-name{
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem 0rem
+}
+.product-name input{
+    width: 30%;
+    height: 2rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    outline: none;
+}
+
+.product-price{
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem 0rem;
+}
+.product-price input{
+    width: 30%;
+    height: 2rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    outline: none;
+}
+.product-stock{
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem 0rem
+}
+.stock-content-head{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 6fr 4fr;
+    /* background-color: grey; */
+}
+.stock-content{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 0.7fr 6fr 4fr;
+    /* background-color: grey; */
+}
+
+.stock-content div , input{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    height: 2rem;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 1rem;
+    /* background-color: grey; */
+}
+
+.product-pictures{
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem 0rem;
+}
+
+
+.footer {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+  
+.social-media {
+    text-align: center;
+    background-color: white;
+}
+  
+.footer-bar {
+    height: 2.5rem;
+    background-color: #504d4d;
+}
