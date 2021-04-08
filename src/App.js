@@ -7,12 +7,14 @@ import Login from "./Screens/Login";
 import AdminDashboard from "./Screens/admin";
 import Register from "./Screens/register";
 import EditProfile from "./Screens/edit_profile_buyer";
+import Onlineorderotherplatform from "./Screens/ordersotherplatform";
 function App() {
   return (
     <>
     <div className="App">
-      <Route exact path="/" component={EditProfile} />
-      {/* <Route exact path="/" component={Login} /> */}
+      {/* <Route exact path="/" component={EditProfile} /> */}
+      {/* <Route exact path="/" component={Onlineorderotherplatform} /> */}
+      <Route exact path="/" component={Login} />
       <Route exact path="/admin" component={AdminDashboard} />
       <Route exact path="/register" component={Register} />
     </div>
