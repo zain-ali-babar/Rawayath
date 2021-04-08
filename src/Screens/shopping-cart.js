@@ -69,6 +69,9 @@ function Shoppingcart () {
                 <div className='final-box' style={{fontSize: '1.5em', fontWeight: 'bold'}}>TOTAL</div>
                 <div className='final-box'></div>
             </div>
+            <button type='submit' style={{margin: "2em auto 0em", height:'3em', width:'9em', fontSize: '1em', fontWeight:'bold', borderRadius:'1em', outline:'none', backgroundColor: '#504d4d'}}>{
+                <text style={{color:'white'}}>REGISTER</text>
+                }</button>
         </div>
     );
 }
