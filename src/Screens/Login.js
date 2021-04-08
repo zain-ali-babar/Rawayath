@@ -9,11 +9,58 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import firebase from "firebase";
+import {db} from "./fire.js";
 
 import logo from "./images/logo.png";
 
 function Login() {
+  const history = useHistory();
+  const [email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
+  
+  const handleClick=(e)=>{
+    console.log("haha")
+    firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in 
+    var user = userCredential.user;
+    var id=user.uid;
+    var docRef = db.collection("admin").doc(id);
+
+docRef.get().then((doc) => {
+
+    if (doc.exists) {
+      return(
+        history.push("/admin")
+		);
+    } else {
+      return(
+        history.push("/register")
+      );
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+    
+  
+    // ...
+  })
+  .catch((error) => {
+    alert("Username or password is wrong!!")
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+  });
+
+
+
+  }
+
+
   return (
+    
+
     <div className="loginForm">
       <div className="website-header">
         <div>
@@ -57,7 +104,10 @@ function Login() {
                         padding: "25px 0px 0px 0px"
                       }}
                     >
-                      <input type="email"></input>
+                      <input 
+                      type="email"
+                      value={email}
+                      onChange={event => setEmail(event.target.value)}></input>
                     </div>
                   </Grid>
                   <Grid xs={4}>
@@ -77,12 +127,15 @@ function Login() {
                         padding: "25px 0px 0px 0px"
                       }}
                     >
-                      <input type="password"></input>
+                      <input 
+                      type="password"
+                      value={password}
+                      onChange={event => setPassword(event.target.value)}></input>
                     </div>
                   </Grid>
                   <Grid xs={12}>
                     <div>
-                      <button type="button" className="signin-button">
+                      <button type="submit" onClick={handleClick} className="signin-button">
                         SIGN IN
                       </button>
                     </div>
