@@ -36,7 +36,7 @@ docRef.get().then((doc) => {
 		);
     } else {
       return(
-        history.push("/register")
+        history.push("/")
       );
     }
 }).catch((error) => {
@@ -62,22 +62,27 @@ docRef.get().then((doc) => {
       history.push("/register")
     );
   }
-
+  const home=(e)=>{
+    e.preventDefault();
+    return(
+      history.push("/")
+    );
+  }
 
   return (
     
 
     <div className="loginForm">
       <div className="website-header">
-        <div>
-          <a className="contact-button" href="https://www.google.com/">
+        <div onClick={reg}>
+          <a className="contact-button" href="" >
             CONTACT US
           </a>
         </div>
       </div>
       <Grid container spacing={3}>
         <Grid item xs={4}>
-          <a className="rawayath-logo" href="">
+          <a className="rawayath-logo" href="" onClick={home}>
             <img src={logo} alt="Image of logo" width="100" height="33"></img>
           </a>
         </Grid>

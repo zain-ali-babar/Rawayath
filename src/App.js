@@ -10,15 +10,17 @@ import EditProfile from "./Screens/edit_profile_buyer";
 
 import HomePage from "./Screens/homepage.js";
 import AddProduct from "./Screens/addproduct";
+import ProductDescription from "./Screens/productdescription";
 function App() {
   return (
     <>
     <div className="App">
       {/* <Route exact path="/" component={EditProfile} /> */}
+      {/* <Route exact path="/" component={AddProduct} /> */}
     
+      <Route exact path="/" component={HomePage} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/" component={AddProduct} />
-      {/* <Route exact path="/" component={HomePage} /> */}
+      <Route exact path="/pd/:id" component={ProductDescription} />
       <Route exact path="/admin" component={AdminDashboard} />
       <Route exact path="/register" component={Register} />
     </div>

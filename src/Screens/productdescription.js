@@ -1,15 +1,54 @@
-import react from 'react'
 
+import React , {useState,useEffect} from 'react'
 //imports for product description page
-import './frontend/styles/productDescription.css'
+import './productDescription.css'
 import Logo from './images/logo.png'
 import {FaShoppingCart} from "react-icons/fa"
 import {FaArrowLeft} from "react-icons/fa"
 import {FaArrowRight} from "react-icons/fa"
+import { useHistory,useParams } from "react-router-dom";
+import {db} from "./fire.js";
+import firebase from "firebase";
+
+function ProductDescription({match}){
+  let s=match.params.id;
+  console.log(s)
+  const[quantity,setQuantity]=useState("")
+  const[color,setColor]=useState("")
+  const[size,setSize]=useState("")
+  const[prod,setProd]=useState("")
+  useEffect(()=>{
+  db.collection('product').doc(s).get().then(snapshot=>setProd({description:snapshot.data().description,name:snapshot.data().name,picture_link:snapshot.data().picture_links,price:snapshot.data().price}))
+})
+console.log(quantity)
+
+const handleclick=(e)=>{
+  var user = firebase.auth().currentUser;
 
 
-function ProductDescription(){
+  if (user != null) {
+    var uid=user.uid;
+
+  }
+  db.collection('shoppingcart').doc(uid).set({
+    buyer_id:uid,
+    product_id:s,
+    quantity:quantity,
+    color:color,
+    size:size,
+    
+    
+}).then(()=>{
+  alert("Added to shopping cart")
+    
+}).catch(error=>{
+    alert(error.message)
+})
+
+  
+}
     return(
+      
       <div className= "product-description">
         <div className="header">
           <a href="" className="contact-us-bar">
@@ -33,7 +72,7 @@ function ProductDescription(){
               <FaArrowLeft/>
             </div>
             <div className="product-image">
-              <img src="https://i.pinimg.com/236x/f6/46/8d/f6468d1d0bb282073b9b21256490e5c0.jpg" alt="No Image" />
+              <img src={prod.picture_link} alt="No Image" />
             </div>
             <div className="scroll-button">
               <FaArrowRight/>
@@ -41,46 +80,50 @@ function ProductDescription(){
           </div>
           <div className="product-details">
             <div className="product-name inner-padding">
-              <h1>Name of Suit</h1>
+              <h1>{prod.name}</h1>
             </div>
             <div className="product-price inner-padding">
-              <h1>Rs. 4000</h1>
+              <h1>Rs. {prod.price}</h1>
             </div>
             <div className="availability inner-padding">
-              <h2>(In Stock)</h2>
+              <h2>Description:</h2>
+              <div>
+                {prod.description}
+              </div>
             </div>
             <div className="product-color inner-padding">
               <h2>Select Color:</h2>
-              <select name="color" id="color">
-                <option value="color1">color1</option>
-                <option value="color2">color2</option>
-                <option value="color3">color3</option>
-                <option value="color4">color4</option>
-                <option value="color5">color5</option>
+              <select name="color" id="color" value={color} onChange={event => setColor(event.target.value)}>
+                <option value="Black">Black</option>
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="White">White</option>
               </select>
             </div>
             <div className="product-size inner-padding">
               <h2>Select Size:</h2>
-              <div className="size-buttons">
-                <button className="xs">XS</button>
-                <button className="s">S</button>
-                <button className="m">M</button>
-                <button className="l">L</button>
-                <button className="xl">XL</button>
+              <div className="size-buttons" value={size} onClick={event => setSize(event.target.value)}>
+                <button className="s" type='submit' value="S">S</button>
+                <button className="m" type='submit' value="M">M</button>
+                <button className="l" type='submit' value="L">L</button>
+                <button className="xl" type='submit' value="XL">XL</button>
               </div>
             </div>
             <div className="product-quantity inner-padding">
               <h2>Select Quantity:</h2>
-              <select name="color" id="color">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+              <select name="color" id="color" value={quantity} onChange={event => setQuantity(event.target.value)}>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
               </select>
+            
             </div>
+            
             <div className="add-to-cart">
-              <button >
+              <button onClick={handleclick} >
                 ADD TO CART
               </button>
             </div>
@@ -92,7 +135,7 @@ function ProductDescription(){
 
 
 
-        <div className="footer">  
+        {/* <div className="footer">  
         <div className="social-media">
           <div style={{ fontSize: "1rem", padding: "5px" }}>
             BE A PART OF OUR SOCIAL NETWORK
@@ -133,7 +176,7 @@ function ProductDescription(){
               </span>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

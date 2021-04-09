@@ -3,7 +3,7 @@ import React , {useState,useEffect} from 'react'
 import {db} from './fire.js'
 
 //this is imports for homePage screen
-import './frontend/styles/s.css';
+import './homepage.css';
 import {FaSearch, FaUserAlt} from 'react-icons/fa'
 import Logo from './images/logo.png'
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
@@ -11,19 +11,26 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { useHistory,useParams } from "react-router-dom";
+
 
 
 function HomePage(){
-
+  const history = useHistory();
   const [listProduct , setListProduct] = useState([])
   // HomePageCard(product_info['name'] , product_info['picture_link'] , product_info['price'])
 
   useEffect(()=>{
     console.log("useeffect work")
     db.collection('product').onSnapshot(snapshot =>{
-      setListProduct(snapshot.docs.map(doc=> ({id: doc.data().product_id ,color: doc.data().color, name: doc.data().name, price: doc.data().price, size: doc.data().size, stock: doc.data().stock   ,picture_link: doc.data().picture_links})))
+      setListProduct(snapshot.docs.map(doc=> ({id: doc.data().product_id , name: doc.data().name, price: doc.data().price, description: doc.data().description   ,picture_link: doc.data().picture_links})))
     })
   }, [])
+  function reg (){
+    return(
+     history.push("./login")
+    );
+  }
   
   function HomePageCard(){
     return(
@@ -33,8 +40,16 @@ function HomePage(){
         listProduct.map((product_info)=>{
           {/* const pic_link = product_info['product_link']; */}
           return (
-            <div className="card">
-          <a href ="">
+            
+            <div className="card" id= {product_info['id']} onClick={()=>{
+              
+              return(
+      
+      history.push("./pd/"+product_info['id'])
+ 
+     );
+            }}>
+          <a  >
           <Card>
             <CardBody>
             {/* aa */}
@@ -84,7 +99,7 @@ function HomePage(){
         <img src={Logo} width="200rem"></img>
       </div>
       <div className="signin-button">
-      <button>
+      <button onClick={reg}>
         <FaUserAlt style={{color: 'white'}}></FaUserAlt>
         <span> SIGN IN / SIGN UP</span>
       </button>
