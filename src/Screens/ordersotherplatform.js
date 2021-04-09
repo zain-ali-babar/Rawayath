@@ -49,27 +49,27 @@ function EditProfile() {
         }
         else if (productdetails=="")
         {
-          alert("Email is empty")
+          alert("Product details is empty")
 
         }
         else if (customer=="")
         {
-          alert("Phone is empty")
+          alert("Customer is empty")
 
         }
         else if (quantity=="")
         {
-          alert("Mailing Address is empty")
+          alert("Quantity is empty")
 
         }
         else if (price=="")
         {
-          alert("Password is empty")
+          alert("Price is empty")
 
         }
         else if (platform=="")
         {
-          alert("Confirm Password is empty")
+          alert("Platform is empty")
 
         }
         

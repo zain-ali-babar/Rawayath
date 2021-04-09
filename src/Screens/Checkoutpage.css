@@ -1,0 +1,86 @@
+.website-header {
+    background-color: #504d4d;
+    height: 3em;
+    text-align: right;
+    color: white;
+    font-size: 0.7rem;
+    /* font-family: Roboto; */
+  }
+  
+  .contact-button {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 7px;
+    font-weight: bold;
+  }
+  
+  .register-box {
+    /*height: 500px;*/
+    padding: 2em 0em;
+    justify-content: center;
+    margin-top: 14em;
+    margin-right: 25em;
+    margin-left: 2em;
+    border: 3px solid #504d4d;
+    border-radius: 2em;
+  }
+  .checkout-box {
+    /*height: 500px;*/
+    background-color: #d4d4d4;
+    padding: 2em 0em;
+    justify-content: center;
+    margin-top: 10em;
+    margin-right: 2em;
+    margin-left: 0em;
+    border: 2px solid #ffffff;
+    border-radius: 0em;
+  }
+  .footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  .social-media {
+    text-align: center;
+  }
+  
+  .footer-bar {
+    height: 4em;
+    background-color: #504d4d;
+  }
+  .register-box button{
+    font-size: 1rem;
+    background-color: #504d4d;
+    padding:0.5rem 1.5rem;
+    text-transform: uppercase;
+    color:white;
+    border-radius: 1rem;
+    border:none
+
+
+  }
+  .register-box input{
+    border-radius: 1rem;
+    border:1px solid #504d4d;
+    padding: 0.4rem;
+
+  }
+  .input-box{
+    text-align: left;
+    padding-left:6rem;
+    padding-top: 0.5rem;
+  }
+  .return-cart {
+    text-align: center;
+    color: #504d4d;
+    padding-bottom: 0px;
+  }
