@@ -1,15 +1,86 @@
-import react from 'react'
 
+import React, { useState, useEffect } from "react";
 // imports for adding a product 
-import './frontend/styles/addProduct.css'
+import './addProduct.css'
 import Logo from './images/logo.png'
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import Uploady from "@rpldy/uploady";
+import UploadButton from "@rpldy/upload-button";
+import UploadPreview from "@rpldy/upload-preview";
+import 'firebase/storage';
+import {db} from "./fire.js";
+import firebase from "firebase";
+
 
 function AddProduct(){
+  const storage = firebase.storage()
+  const [file, setFile] = useState(null);
+  const [url, setURL] = useState("");
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  
+
+ 
+ 
+  function handleChange(e) {
+    setFile(e.target.files[0]);
+    console.log(e.target.files[0].name);
+  }
+
+  function handleUpload(e) {
+    e.preventDefault();
+    const uploadTask = storage.ref(`/images/${file.name}`).put(file);
+    uploadTask.on("state_changed", console.log, console.error, () => {
+      storage
+        .ref("images")
+        .child(file.name)
+        .getDownloadURL()
+        .then((url) => {
+          setFile(null);
+          setURL(url);
+          console.log(url);
+
+          var docRef=db.collection('product').doc()
+          docRef.set({
+            product_id:docRef.id,
+            name:name,
+            price:price,
+            picture_links:url,
+            description:description
+            
+        }).then(()=>{
+          alert("Product Created")
+            
+        }).catch(error=>{
+            alert(error.message)
+        })
+        
+        
+
+        });
+    });
+  }
+
+  
+
+  function Pic (){
+  
+    return(
+      <div>
+      <form onSubmit={handleUpload} >
+        <input type="file"  onChange={handleChange}/>
+        
+        <button disabled={!file}>upload</button>
+      </form>
+      
+    </div>
     
+    );
+    }
     
 
 
@@ -36,7 +107,9 @@ function AddProduct(){
               Name<span style={{color: 'red'}} >*</span>
             </div>
             <div>
-              <input></input>
+              <input
+              value={name}
+            onChange={event =>setName(event.target.value)}></input>
             </div>
           </div>
           <div className="product-price">
@@ -44,14 +117,16 @@ function AddProduct(){
               Price<span style={{color: 'red'}} >*</span>
             </div>
             <div>
-              <input></input>
+              <input 
+            value={price}
+            onChange={event =>setPrice(event.target.value)}></input>
             </div>
           </div>
-          <div className='product-stock'>
+          {/* <div className='product-stock'>
             <div>
               Stock<span style={{color: 'red'}} >*</span>
             </div>
-            <div className='stock-content-area'>
+             <div className='stock-content-area'>
               <div className='stock-content-head'>
                 <div>Size</div>
                 <div>Color</div>
@@ -93,7 +168,19 @@ function AddProduct(){
                 <input></input>
               </div>
               <div></div>
+            </div> 
+          </div> */}
+          <div className="description">
+            <div>
+              Description<span style={{color: 'red'}} >*</span>
             </div>
+            <div>
+            <textarea 
+            value={description}
+            onChange={event =>setDescription(event.target.value)}
+          ></textarea>
+            </div>
+
           </div>
           <div>
             <span style={{fontWeight:'bold', width: '50%'}}>Note:</span> Colors available for the given size should be written sperated by commas. Quantitites of each color should be written in the same order as the colors.
@@ -101,7 +188,9 @@ function AddProduct(){
           <div className = 'product-pictures'>
             <div>
               Pictures<span style={{color: 'red'}} >*</span>
+              
             </div>
+            <Pic/>
           </div>
         </div>
       
