@@ -234,8 +234,9 @@ function EditProfile() {
             
           </Grid>
           <Grid xs={5}>
-          <div className="checkout-box"></div>
-          
+          <div className="checkout-box">
+         
+          </div>
           </Grid>
           
 
