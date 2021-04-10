@@ -18,8 +18,25 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 import logo from "./images/logo.png";
 
-function Shoppingcart () {
-    const [items,setItems] = React.useState([]);
+function Shoppingcart() {
+    const [listProduct , setListProduct] = useState([])
+    var user = firebase.auth().currentUser;
+
+
+  if (user != null) {
+    var uid=user.uid;
+    }
+
+    useEffect(()=>{
+        
+        db.collection("shoppingcart").where("buyer_id", "==",uid).onSnapshot(snapshot =>{
+          setListProduct(snapshot.docs.map(doc=> ({id: doc.data().buyer_id , name: doc.data().name, price: doc.data().price, color: doc.data().color   ,product_id: doc.data().product_id,quantity:doc.data().quantity,size:doc.data().size})))
+        })
+      }, [])
+
+    
+
+    
     const [quantity, setQuantity] = React.useState(1);
     return(
         <div>
@@ -47,7 +64,7 @@ function Shoppingcart () {
                 <div className='heading-box'>PRICE</div>
                 <div className='heading-box'>QUANTITY</div>
                 <div className='heading-box'>TOTAL</div>
-                {items.map((item,index)=>(
+                {listProduct.map((item,index)=>(
                     <div>
                         <div className='list-box'>
                             <IconButton aria-label="delete" >
@@ -55,7 +72,7 @@ function Shoppingcart () {
                             </IconButton>
                         </div>
                         <div className='list-box'>
-                            <img src={item.picture_link}></img>
+                            {/* <img src={item.picture_link}></img> */}
                         </div>
                         <div className='list-box'>{item.name}</div>
                         <div className='list-box'>{item.name}</div>

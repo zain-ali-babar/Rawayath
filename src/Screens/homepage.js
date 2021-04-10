@@ -8,6 +8,7 @@ import {FaSearch, FaUserAlt} from 'react-icons/fa'
 import Logo from './images/logo.png'
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
 import { FaFacebookSquare } from "react-icons/fa";
+import {FaShoppingCart} from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -77,7 +78,10 @@ function HomePage(){
 
 
 
-  
+    const sp=(ev)=>{
+      ev.preventDefault()
+      history.push("/shoppingcart")
+    }
 
   return (
     <div className="homepage">
@@ -105,6 +109,11 @@ function HomePage(){
       </button>
 
       </div>
+      <div className="shoppingcart-button">
+            <button onClick={sp}>
+              <FaShoppingCart/>
+            </button>
+          </div>
     </div>
     <div style={{backgroundColor: "#504d4d", height:"2px"}}></div>
     <div className="categories">

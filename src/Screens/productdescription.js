@@ -11,6 +11,7 @@ import {db} from "./fire.js";
 import firebase from "firebase";
 
 function ProductDescription({match}){
+  const history=useHistory();
   let s=match.params.id;
   console.log(s)
   const[quantity,setQuantity]=useState("")
@@ -30,22 +31,30 @@ const handleclick=(e)=>{
     var uid=user.uid;
 
   }
-  db.collection('shoppingcart').doc(uid).set({
+  db.collection('shoppingcart').doc().set({
     buyer_id:uid,
     product_id:s,
     quantity:quantity,
     color:color,
     size:size,
+    name:prod.name,
+    price:prod.price
     
     
 }).then(()=>{
   alert("Added to shopping cart")
+  history.push("/")
+
     
 }).catch(error=>{
     alert(error.message)
 })
 
   
+}
+const sp=(ev)=>{
+  ev.preventDefault()
+  history.push("/shoppingcart")
 }
     return(
       
@@ -60,7 +69,7 @@ const handleclick=(e)=>{
             <img style = {{paddingLeft: "3rem"}}src={Logo} width="200rem"></img>
           </div>
           <div className="shoppingcart-button">
-            <button>
+            <button onClick={sp}>
               <FaShoppingCart/>
             </button>
           </div>

@@ -7,9 +7,10 @@ import Login from "./Screens/Login";
 import AdminDashboard from "./Screens/admin";
 import Register from "./Screens/register";
 import EditProfile from "./Screens/edit_profile_buyer";
-
+import Checkout from "./Screens/Checkoutpage";
 import HomePage from "./Screens/homepage.js";
 import AddProduct from "./Screens/addproduct";
+import Shoppingcart from "./Screens/shopping_cart";
 import ProductDescription from "./Screens/productdescription";
 function App() {
   return (
@@ -20,9 +21,12 @@ function App() {
     
       <Route exact path="/" component={HomePage} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/shoppingcart" component={Shoppingcart} />
       <Route exact path="/pd/:id" component={ProductDescription} />
       <Route exact path="/admin" component={AdminDashboard} />
       <Route exact path="/register" component={Register} />
+
+
     </div>
     </>
     
