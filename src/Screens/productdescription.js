@@ -18,10 +18,41 @@ function ProductDescription({match}){
   const[color,setColor]=useState("")
   const[size,setSize]=useState("")
   const[prod,setProd]=useState("")
+  const[col1,setCol1]=useState("#504d4d")
+  const[col2,setCol2]=useState("#504d4d")
+  const[col3,setCol3]=useState("#504d4d")
+  const[col4,setCol4]=useState("#504d4d")
+  const [enable, setEnable] = useState(false)
   useEffect(()=>{
   db.collection('product').doc(s).get().then(snapshot=>setProd({description:snapshot.data().description,name:snapshot.data().name,picture_link:snapshot.data().picture_links,price:snapshot.data().price}))
 })
 console.log(quantity)
+
+const onMouseDown1 = (e) => {
+  setCol1('orange')
+  setCol2('#504d4d')
+  setCol3('#504d4d')
+  setCol4('#504d4d')
+}
+
+const onMouseDown2 = (e) => {
+  setCol1('#504d4d')
+  setCol2('orange')
+  setCol3('#504d4d')
+  setCol4('#504d4d')
+}
+const onMouseDown3 = (e) => {
+  setCol1('#504d4d')
+  setCol2('#504d4d')
+  setCol3('orange')
+  setCol4('#504d4d')
+}
+const onMouseDown4 = (e) => {
+  setCol1('#504d4d')
+  setCol2('#504d4d')
+  setCol3('#504d4d')
+  setCol4('orange')
+}
 
 const handleclick=(e)=>{
   var user = firebase.auth().currentUser;
@@ -102,7 +133,11 @@ const sp=(ev)=>{
             </div>
             <div className="product-color inner-padding">
               <h2>Select Color:</h2>
-              <select name="color" id="color" value={color} onChange={event => setColor(event.target.value)}>
+              <select name="color" id="color" value={color} option onChange={event => {
+                setColor(event.target.value);
+                setEnable(true);
+                }}>
+                <option selected>Select</option>
                 <option value="Black">Black</option>
                 <option value="Red">Red</option>
                 <option value="Green">Green</option>
@@ -112,11 +147,11 @@ const sp=(ev)=>{
             </div>
             <div className="product-size inner-padding">
               <h2>Select Size:</h2>
-              <div className="size-buttons" value={size} onClick={event => setSize(event.target.value)}>
-                <button className="s" type='submit' value="S">S</button>
-                <button className="m" type='submit' value="M">M</button>
-                <button className="l" type='submit' value="L">L</button>
-                <button className="xl" type='submit' value="XL">XL</button>
+              <div name='size' className="size-buttons" value={size} onClick={event => setSize(event.target.value)}>
+                <button className="s" type='submit' value="S" style={{backgroundColor: col1}} onMouseDown={onMouseDown1}>S</button>
+                <button className="m" type='submit' value="M" style={{backgroundColor: col2}} onMouseDown={onMouseDown2}>M</button>
+                <button className="l" type='submit' value="L" style={{backgroundColor: col3}} onMouseDown={onMouseDown3}>L</button>
+                <button className="xl" type='submit' value="XL" style={{backgroundColor: col4}} onMouseDown={onMouseDown4}>XL</button>
               </div>
             </div>
             <div className="product-quantity inner-padding">
@@ -132,7 +167,7 @@ const sp=(ev)=>{
             </div>
             
             <div className="add-to-cart">
-              <button onClick={handleclick} >
+              <button onClick={handleclick} disabled={!enable} style={{disabled: {backgroundColor: 'grey'}}}>
                 ADD TO CART
               </button>
             </div>

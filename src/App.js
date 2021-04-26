@@ -10,7 +10,7 @@ import HomePage from "./Screens/homepage.js";
 import AddProduct from "./Screens/addproduct";
 import Shoppingcart from "./Screens/shopping_cart";
 import ProductDescription from "./Screens/productdescription";
-import ApproveOrders from "./Screens/approve_prod";
+import ApproveOrders from "./Screens/approve_orders";
 function App() {
   return (
     <>

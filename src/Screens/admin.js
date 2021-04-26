@@ -11,9 +11,16 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import ApproveOrders from "./approve_orders";
 import './admin.css';
 
 function AdminDashboard(){
+    const history = useHistory();
+    function approve (){
+        return(
+         history.push("./approve_orders")
+        );
+      }
     return(
         <div className="admin">
         <div className="side_bar">
@@ -21,7 +28,7 @@ function AdminDashboard(){
         <a href="">Register</a>
         </div>
         <div>
-        <a href="">Register</a>
+        <a href="./approve_orders">APPROVE ORDERS</a>
         </div>
         
         <div>
