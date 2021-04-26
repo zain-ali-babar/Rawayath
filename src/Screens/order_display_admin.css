@@ -1,0 +1,111 @@
+html{
+    font-size:65%;
+  }
+
+  *{
+      margin: 0px;
+      padding: 0px;
+  }
+
+  .website_headers_o {
+    background-color: #504d4d;
+    height: 1.5rem;
+    text-align: right;
+    color: white;
+    font-size: 0.2rem;
+    /* font-family: Roboto; */
+  }
+
+  .approve_details_admin{
+    text-align: left;
+  }
+  
+  .contact_buttons_o {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .page_titles_o {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 0.7rem;
+    font-weight: bold;
+  }
+  
+  .cart_table_o {
+    /* top right bottom left   */
+    display: grid;
+    grid-template-columns: 1fr 3fr 8fr 3fr 3fr 3fr;
+    justify-content: center;
+    column-gap: 0em;
+    row-gap: 0em;
+    /* border: 2px solid #504d4d; */
+  }
+  
+  .heading_box_o {
+    border: 0.1rem solid black;
+    background-color: #504d4d;
+    height: 1.6rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: azure;
+    border-bottom: 0.2rem solid black;
+  }
+  
+  .list_box_o {
+    border: 0.1rem solid black;
+    height: 4rem;
+    /* font-weight: bold; */
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    justify-content: center;
+    border-top: 0rem solid black;
+    border-bottom: 0.2rem solid black;
+  }
+  
+  /* .list_box img {
+    
+  } */
+  
+  .r_box_o {
+    /* border: 3px solid #504d4d; */
+    display: grid;
+    height: 3rem;
+    align-self: center;
+    margin: 3rem 45rem 0.5rem 30em;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* grid-template-rows: 3fr 3fr 4fr; */
+    justify-content: center;
+  }
+  
+  .final_box_o {
+    border: 0.2rem solid #504d4d;
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    /* height: 2.5em; */
+    text-align: center;
+    /* width: 6.4em; */
+  }
+  
+  .footers_o {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  .social_medias_o {
+    text-align: center;
+  }
+  
+  .footer_bars_o {
+    height: 2.5rem;
+    background-color: #504d4d;
+  }
+  

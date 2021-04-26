@@ -1,4 +1,4 @@
-.website-header {
+.website_headerl {
     background-color: #504d4d;
     height: 1.25em;
     text-align: right;
@@ -7,20 +7,20 @@
     /* font-family: Roboto; */
   }
   
-  .contact-button {
+  .contact_buttonl {
     color: white;
     text-decoration: none;
     margin-right: 10px;
   }
   
-  .page-title {
+  .page_titlel {
     text-align: center;
     font-size: 1.5em;
     padding-top: 7px;
     font-weight: bold;
   }
   
-  .rectangular-box {
+  .rectangular_boxl {
     border: 4px solid #504d4d;
     border-radius: 2em;
     height: 17em;
@@ -29,9 +29,10 @@
     margin-right: 4em;
     justify-content: center;
     align-content: center;
+    height: 50%;
   }
   
-  .signin-button {
+  .signin_buttonl {
     width: 74%;
     margin: 4em 4em 3em;
   
@@ -39,50 +40,51 @@
     color: white;
   }
   
-  .forgot-password {
+  .forgot_passwordl {
     text-align: center;
     color: #504d4d;
     padding-bottom: 20px;
   }
   
-  .new-customer {
+  .new_customerl {
     padding-top: 3em;
     padding-left: 5em;
     text-decoration: underline;
     font-weight: bold;
     font-size: 1.1rem;
+    height: 50%;
   }
   
-  .content {
+  .contentl {
     padding-top: 2em;
     padding-left: 5em;
     padding-right: 7em;
   }
   
-  .signup-button {
+  .signup_buttonl {
     width: 65%;
     margin: 2em 7em 0em 6em;
     background-color: #504d4d;
     color: white;
   }
   
-  .footer {
+  .footerl {
     width: 100%;
     text-align: center;
     position: fixed;
     bottom: 0px;
   }
   
-  .social-media {
+  .social_medial {
     text-align: center;
   }
   
-  .footer-bar {
+  .footer_barl {
     height: 25px;
     background-color: #504d4d;
   }
   
-  /* .page-title-list { */
+  /* .page_title-list {  */
   /* list-style: none; */
   /* flex-direction: row; */
   /* display: inline-flex; */
@@ -91,5 +93,5 @@
   
   /* .rawayath-logo {
     justify-content: flex-end;
-  } */
+  }*/
   

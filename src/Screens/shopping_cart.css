@@ -1,61 +1,84 @@
-.website-header {
+html{
+  font-size:65%;
+}
+.website_headers {
   background-color: #504d4d;
-  height: 1.25em;
+  height: 1.5rem;
   text-align: right;
   color: white;
-  font-size: 1rem;
+  font-size: 0.2rem;
   /* font-family: Roboto; */
 }
 
-.contact-button {
+.contact_buttons {
   color: white;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 1rem;
+  font-size: 1.25rem;
 }
 
-.page-title {
+.page_titles {
   text-align: center;
-  font-size: 1.5em;
-  padding-top: 7px;
+  font-size: 2.5rem;
+  padding-top: 0.7rem;
   font-weight: bold;
 }
 
-.middle-content{
+.cart_table {
   /* top right bottom left   */
-  margin: 0em 8em 0em 8em;
+  margin: 0rem 8rem 0rem 8rem;
   display: grid;
-  grid-template-columns: 1fr 3fr 10fr 3fr 5fr 3fr;
+  grid-template-columns: 1fr 3fr 8fr 3fr 4fr 3fr;
   justify-content: center;
+  column-gap: 0em;
+  row-gap: 0em;
   /* border: 2px solid #504d4d; */
 }
 
-.heading-box{
-    border: 2px solid #504d4d;
-    height: 1.6em;
-    text-align: center;
-    /* width: 6.4em; */
-}
-
-.list-box{
-  border: 2px solid #504d4d;
-  height: 6.4em;
+.heading_box {
+  border: 0.2rem solid black;
+  background-color: #504d4d;
+  height: 1.6rem;
   text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: azure;
+  border-bottom: 0.35rem solid black;
 }
 
-.r-box {
+.list_box {
+  border: 0.2rem solid black;
+  height: 6rem;
+  /* font-weight: bold; */
+  font-size: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+  justify-content: center;
+  border-top: 0rem solid black;
+  border-bottom: 0.35rem solid black;
+}
+
+/* .list_box img {
+  
+} */
+
+.r_box {
   /* border: 3px solid #504d4d; */
   display: grid;
-  height: 9em;
-  margin: 3em 30em 1em 30em;
+  height: 3rem;
+  align-self: center;
+  margin: 3rem 30rem 1rem 15em;
   grid-template-columns: 3fr 4fr;
-  grid-template-rows: 3fr 3fr 4fr;
+  font-size: 2rem;
+  font-weight: bold;
+  /* grid-template-rows: 3fr 3fr 4fr; */
   justify-content: center;
 }
 
-.final-box{
-  border: 2px solid #504d4d;
+.final_box {
+  border: 0.2rem solid #504d4d;
   text-align: center;
-  padding: 0.5em 0.5em;
+  padding: 0.5rem 0.5rem;
   /* height: 2.5em; */
   text-align: center;
   /* width: 6.4em; */
@@ -73,18 +96,18 @@
   text-align: center;
 } */
 
-.footer {
+.footers {
   width: 100%;
   text-align: center;
   position: fixed;
   bottom: 0px;
 }
 
-.social-media {
+.social_medias {
   text-align: center;
 }
 
-.footer-bar {
-  height: 25px;
+.footer_bars {
+  height: 2.5rem;
   background-color: #504d4d;
 }

@@ -16,7 +16,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import logo from "./images/logo.png";
 
 
-function EditProfile() {
+function Checkout() {
     const [firstname,setFname] = useState('');
     const [lastname,setLname] = useState('');
 	const [address,setAddress] = useState('');
@@ -288,4 +288,4 @@ function EditProfile() {
     </div>
   );
 }
-export default EditProfile;
+export default Checkout;

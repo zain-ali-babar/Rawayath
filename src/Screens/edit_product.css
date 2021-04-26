@@ -1,0 +1,85 @@
+html{
+    font-size: 65%;
+  }
+  .website_headerep {
+      background-color: #504d4d;
+      height: 2.5em;
+      text-align: right;
+      color: white;
+      font-size: 1.25rem;
+      /* font-family: Roboto; */
+    }
+    .options{
+        margin: "6rem 0rem 0em 0em";
+        height: "4rem";
+        width: "10em";
+        font-size: "1.5rem";
+        border-radius: "1em";
+        outline: "none";
+        background-color: "green";
+    }
+    .middle_contentep{
+        /* border: 2px solid #504d4d; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0rem;
+        margin: 5rem 20rem;
+        margin-bottom: 10rem;
+        overflow-y:auto;
+    }
+    .product_imageep{
+        width: 25rem;
+        height: 37rem;
+        margin: auto;
+        margin-top: 1rem
+        /* border: 2px solid #504d4d; */
+    }
+    .product_nameep{
+        text-align: center;
+        color: white; 
+        width: 100%;
+        height: 1rem;
+         background-color: #504d4d; 
+    }
+    
+    .outlineep{
+        /* width:65rem; */
+        border : 2px solid black
+    }
+    .selectep1{
+        padding: 8rem 8rem 8rem 8rem;
+
+    }
+    .contact_buttonep {
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    
+    .page_titleep {
+      text-align: center;
+      font-size: 2rem;
+      padding-top: 7px;
+      font-weight: bold;
+    }
+  
+    .footerep {
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      bottom: 0px;
+    }
+    
+    .social_mediaep {
+      text-align: center;
+    }
+    
+    .footer_barep {
+      height: 2.5rem;
+      background-color: #504d4d;
+    }
+    
+    .ep img{
+      width: 22rem;
+      /* height: 50rem; */
+    }

@@ -96,7 +96,7 @@ html{
 .product-size button{
     border: none;
     color: white;
-    /* background-color: #504d4d; */
+    background-color: #504d4d;
     height: 3rem;
     width: 3rem;
     margin: 0.2rem;

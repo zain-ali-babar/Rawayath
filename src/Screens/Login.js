@@ -69,33 +69,48 @@ docRef.get().then((doc) => {
     );
   }
 
+  const handleForgot = (e) => {
+    e.preventDefault()
+    if(email!==""){
+      firebase.auth().sendPasswordResetEmail(email).then(function() {
+        alert("Please check email to reset password")
+      }).catch(function(error) {
+        alert("Error!")
+      });
+      
+    }
+    else{
+      alert("Enter Email Address First")
+    }
+  }
+
   return (
     
 
     <div className="loginForm">
-      <div className="website-header">
+      <div className="website_headerl">
         <div onClick={reg}>
-          <a className="contact-button" href="" >
+          <a className="contact_buttonl" href="" >
             CONTACT US
           </a>
         </div>
       </div>
       <Grid container spacing={3}>
         <Grid item xs={4}>
-          <a className="rawayath-logo" href="" onClick={home}>
+          <a className="rawayath_logol" href="" onClick={home}>
             <img src={logo} alt="Image of logo" width="100" height="33"></img>
           </a>
         </Grid>
         <Grid item xs={4}>
-          <div className="page-title">SIGN IN</div>
+          <div className="page_titlel">SIGN IN</div>
         </Grid>
       </Grid>
       <hr />
-      <div className="middle-content">
+      <div className="middle_contentl">
         <Grid container spacing={3}>
           <Grid xs={6}>
-            <div className="login-continer">
-              <div className="rectangular-box">
+            <div className="login_continerl">
+              <div className="rectangular_boxl">
                 <div style={{ height: "40px" }}></div>
                 <Grid container spacing={3}>
                   <Grid xs={4}>
@@ -146,14 +161,14 @@ docRef.get().then((doc) => {
                   </Grid>
                   <Grid xs={12}>
                     <div>
-                      <button type="submit" onClick={handleClick} className="signin-button">
+                      <button type="submit" onClick={handleClick} className="signin_buttonl">
                         SIGN IN
                       </button>
                     </div>
                   </Grid>
                   <Grid xs={12}>
                     <div style={{ textAlign: "center" }}>
-                      <a className="forgot-password" href="">
+                      <a className="forgot_passwordl" href="" onClick={handleForgot}>
                         Forgot Passowrd?
                       </a>
                     </div>
@@ -163,26 +178,26 @@ docRef.get().then((doc) => {
             </div>
           </Grid>
           <Grid xs={6}>
-            <div className="login-continer">
+            <div className="login_continerl">
               <div style={{ height: "80px" }}></div>
-              <div className="new-customer">NEW CUSTOMER?</div>
+              <div className="new_customerl">NEW CUSTOMER?</div>
               <div className="content">
                 Creating an account will help youtrack orders, easy checkout and
                 you will be updated with our latest promotion and deals.
               </div>
               <div>
-                <button className="signup-button" type="button" onClick={reg}>
+                <button className="signup_buttonl" type="button" onClick={reg}>
                   CREATE A NEW ACCOUNT
                 </button>
               </div>
             </div>
           </Grid>
         </Grid>
-        <div className="footer">
+        <div className="footerl">
           <div style={{ fontSize: "0.5em", padding: "5px" }}>
             BE A PART OF OUR SOCIAL NETWORK
           </div>
-          <div className="social-media">
+          <div className="social_medial">
             <a href="" style={{ padding: "10px" }}>
               <FaFacebookSquare style={{ color: "#504d4d" }} />
             </a>
@@ -190,7 +205,7 @@ docRef.get().then((doc) => {
               <FaInstagram style={{ color: "#504d4d" }} />
             </a>
           </div>
-          <div className="footer-bar">
+          <div className="footer_barl">
             <a href="" style={{ padding: "10px" }}>
               <FaRegClock style={{ color: "white", padding: "3px" }} />
               <span

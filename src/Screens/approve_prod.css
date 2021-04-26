@@ -1,0 +1,56 @@
+html {
+  font-size: 65%;
+}
+.website-header {
+  background-color: #504d4d;
+  height: 1.5em;
+  text-align: right;
+  color: white;
+  font-size: 1.25rem;
+  /* font-family: Roboto; */
+}
+
+.contact-button {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 7px;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.footer-bar {
+  height: 2.5rem;
+  background-color: #504d4d;
+}
+
+.middle-content {
+  /* top right bottom left   */
+  margin: 2rem 9rem 1rem 9rem;
+  justify-content: center;
+  /* border: 0.2rem solid #504d4d; */
+}
+
+.list-box {
+  height: 16rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  border: 0.2rem solid #504d4d;
+  padding: 0.5rem;
+}

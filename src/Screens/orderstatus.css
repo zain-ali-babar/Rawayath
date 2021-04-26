@@ -1,0 +1,178 @@
+.website_header {
+    background-color: #504d4d;
+    height: 1.25em;
+    text-align: right;
+    color: white;
+    font-size: 0.7rem;
+    /* font-family: Roboto; */
+  }
+  
+  .contact_button {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  .myaccount{
+      margin-right: 1ch;
+    
+      
+  }
+  .myorder{
+      margin-left: 1ch;
+  }
+  
+  .page_title {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 7px;
+    font-weight: bold;
+  }
+  .title_bar{
+    /* background-color: green; */
+    display: grid;
+    padding: 0.5rem 0.5rem 1rem;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+}
+
+  
+  
+  .ship_dev{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .track_your_order{
+    display: grid;
+    grid-template-columns: repeat(1fr, auto);
+    text-align: center;
+    background-color: #C4C4C4;
+    border: 4px solid #C4C4C4;
+    border-radius: 2em;
+    height: 250px;
+    width: 500px;
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 2em;
+    justify-content: center;   
+
+  }
+
+
+
+  .shipping_info{
+    background-color: #C4C4C4;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    border: 4px solid #C4C4C4;
+    border-radius: 2em;
+    height: 250px;
+    width: 500px;
+    margin-top: 2em;
+    margin-left: 4em;
+    margin-right: 2em;
+    
+    
+  }
+  .order_details{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    text-align: left;
+    background-color: #C4C4C4;
+    border: 4px solid #C4C4C4;
+    border-radius: 2em;
+    height: 530px;
+    width: 500px;
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 2em;
+    
+    
+
+  }
+  
+  .middlecont{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .order_dev{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+  
+.bar_div{
+    display:grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -4em;
+}
+.tab { 
+    display:inline-block; 
+    margin-left: 100px; 
+}
+.div_box{
+    height:20px;
+    width: 350px;
+    margin-top: -4em;
+    margin-right: 13em;
+    margin-left: 13em;
+    border: 3px solid #504d4d;
+    border-radius: 2em;
+
+}
+
+.completebar{
+    height:20px;
+    width: 350px;
+    background-color:#5EB6CA;
+    border: 0px solid #5EB6CA;
+    border-radius: 2em;
+}
+  
+  .signup_button {
+    width: 65%;
+    margin: 2em 7em 0em 6em;
+    background-color: #504d4d;
+    color: white;
+  }
+  
+  .footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  .social_media {
+    text-align: center;
+  }
+  
+  .footer_bar {
+    height: 25px;
+    background-color: #504d4d;
+  }
+.hr_123 {
+    display: block;
+    margin-top: -20em;
+    margin-bottom: 0.5em;
+    margin-left: 13px;
+    margin-right: 13px;
+    border-style:solid;
+    border-width: 1px;
+  }
+  .tot{
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+  }
+  /* .page-title-list { */
+  /* list-style: none; */
+  /* flex-direction: row; */
+  /* display: inline-flex; */
+  /* justify-content: space-between; */
+  /* } */
+  
+  /* .rawayath-logo {
+    justify-content: flex-end;
+  } */
+  

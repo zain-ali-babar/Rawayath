@@ -1,0 +1,86 @@
+.header_cp{
+    background-color: #504d4d;
+    text-align: right;
+}
+
+.contact-us-bar_cp{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight:600;
+    padding: 1rem;
+    font-size: 1.3rem;
+    vertical-align:middle;
+    
+}
+.middle-content_cp{
+    text-align: left;
+    padding : 1rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    justify-content: center;
+}
+.product-name_cp{
+    text-align: center;
+        /* color: white;  */
+     /* background-color: #504d4d;  */
+}
+.product-price_cp{
+    font-weight: bold;
+    text-align:center;
+    font-size: 2rem;
+    padding: 0.5rem 0rem;
+}
+.description_cp{
+    width: 25rem;
+    height: 40rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem 0rem;
+}
+.product-pictures_cp{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.5rem 0rem;
+}
+.product-image_cp{
+    width: 25rem;
+    margin: auto;
+    border: 2px solid #504d4d;
+}
+.title-bar_cp{
+    /* background-color: green; */
+    display: grid;
+    padding: 0.5rem 0.5rem 1rem;
+    grid-template-columns: 1.2fr 2fr;
+}
+.rawayath-logo_cp{
+    text-align: left;
+}
+.page-title_cp{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.footer_cp {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  .social-media_cp {
+    text-align: center;
+  }
+  
+  .footer-bar_cp {
+    height: 2.5rem;
+    background-color: #504d4d;
+  }
+  
+  .add-product_cp img{
+    width: 22rem;
+  }

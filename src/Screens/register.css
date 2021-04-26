@@ -1,4 +1,4 @@
-.website-header {
+.website_headerr {
     background-color: #504d4d;
     height: 1.25em;
     text-align: right;
@@ -7,20 +7,20 @@
     /* font-family: Roboto; */
   }
   
-  .contact-button {
+  .contact_buttonr {
     color: white;
     text-decoration: none;
     margin-right: 10px;
   }
   
-  .page-title {
+  .page_titler {
     text-align: center;
     font-size: 1.5em;
     padding-top: 7px;
     font-weight: bold;
   }
   
-  .register-box {
+  .register_boxr {
     /*height: 500px;*/
     padding: 2em 0em;
     justify-content: center;
@@ -37,15 +37,15 @@
     bottom: 0px;
   }
   
-  .social-media {
+  .social_mediar {
     text-align: center;
   }
   
-  .footer-bar {
+  .footer_barr {
     height: 25px;
     background-color: #504d4d;
   }
-  .register-box button{
+  .register_boxr button{
     font-size: 1rem;
     background-color: #504d4d;
     padding:0.5rem 1.5rem;
@@ -56,13 +56,13 @@
 
 
   }
-  .register-box input{
+  .register_boxr input{
     border-radius: 1rem;
     border:1px solid #504d4d;
     padding: 0.4rem;
 
   }
-  .input-box{
+  .input_boxr{
     text-align: left;
     padding-left:6rem;
     padding-top: 0.5rem;
